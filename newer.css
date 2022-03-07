@@ -1,0 +1,45 @@
+.webcom{
+	margin-top:2px; 
+	margin-left:13px;
+	font-size:32px;
+	color: white;
+ }
+ 
+ .hyper{
+	 margin-top:-60px;
+	 text-align:right;
+	 text-decoration:none;
+	 color: white;
+	  
+ }
+ 
+ body{
+	background-image:url("bfae3fa83ae7efd6b7b56c3df0fac9bf.jpg"); 
+ }
+   
+ .bigHeader{
+	text-align:center;
+	color:white;
+	font-size:90px;
+ }
+ .small{
+	 text-align:center;
+	 color:white;
+ }
+ 
+ .move{
+	 text-align:center;
+ }
+ .myclass{
+	display:inline-flex; 
+ }
+ #determineWeeks{
+	 text-align:center;
+	 color:white;
+	 font-size:45px;
+ }
+ #time{
+	 text-align:center;
+	 color:white;
+	 font-size:35px;
+ }

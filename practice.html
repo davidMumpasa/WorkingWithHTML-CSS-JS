@@ -1,0 +1,92 @@
+<!DOCUMENT html>
+	<html>
+		<head>
+			<title> mywesite </title>
+			<link rel="stylesheet" type ="text/css" href ="newer.css">
+			
+			<script>
+				function myfunction(){
+					var idName = document.getElementById("idName").value;
+					var idEmail = document.getElementById("idEmail").value;
+					
+					if(idName&&idEmail){
+						alert( "thank you "+idName+" for subcribing with "+idEmail);
+					}else {
+						alert("plaese enter your input");
+					}
+				}
+			</script>
+			
+			 
+		</head>
+		
+		<body>
+			 
+				<p class ="webcom"> weBuild </p>
+				<p class ="hyper"> <a class ="hyper" href = "https://outlook.office.com/mail/inbox"> contact us </a></p>
+			 
+			
+			<div class ="second">
+				<p class ="bigHeader"> weBuild </p>
+				
+				<div id="determineWeeks"></div>
+				
+			<div id = "time"></div>
+			
+				<p class = "small" > we are working to improve our website and we will ready to lauch </p>
+			</div>
+			
+			 
+			
+			<div class = "move">
+				<input type ="name" id = "idName" class ="newInp" placeholder = "your name"> <required>
+				<input type ="email" id ="idEmail" class ="emailImp" placeholder = "your email"> <required> 
+				<br><br>
+				
+				<button onclick ="myfunction()" > get notified </button>
+			</div>
+			 
+			 <script>
+				var realWeek = getNumberOfWeeks();
+                document.getElementById("determineWeeks").innerHTML = realWeek;
+                function getNumberOfWeeks(){
+                    var today = new Date();
+                    var oneJan = new Date(today.getFullYear(),11,31);
+                    var oneDec = new Date(today.getDate);
+                    var week =  Math.floor((((oneJan.getTime()-today.getTime())/86400000))/7);
+                    var days =  Math.floor((((oneJan.getTime()-today.getTime())/86400000))%7);
+                    var currentWeek = week +" Weeks " +days+" Days";
+                    
+                    return currentWeek;
+                    
+                }
+				setInterval(function(){
+				const clock = document.querySelector("#time");
+				let time = new Date();
+				let sec = time.getSeconds();
+				let min = time.getMinutes();
+				let hr = time.getHours();
+				let day = 'AM';
+				
+				if(hr > 12){
+					day = 'PM';
+					hr = hr - 12;
+				}if(hr == 0){
+					hr = 12;
+				}
+				if(sec < 10){
+					sec = '0' + sec;
+				}
+				if(min < 10){
+					min = '0' + min;
+				}
+				if(hr < 10){
+					hr = '0' + hr;
+				}
+				clock.textContent = hr + ':' + min + ':' + sec + " " + day;
+			});
+			</script>
+			
+		</body>
+	
+	</html>
